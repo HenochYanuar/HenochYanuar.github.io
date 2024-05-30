@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
-  /* border: 1px solid red !important; */
 }
 
 html {
@@ -65,22 +64,21 @@ main .home-page,
   flex-direction: row;
   position: relative;
   z-index: 1;
-  max-height: 100vh;
+  max-height: 93vh;
   width: 100%;
-  margin-bottom: 80px;
+  margin-bottom: 10%;
   overflow: hidden;
 }
 
 main .home-page .home-text {
   display: flex;
   flex-direction: column-reverse;
-  flex: 50%;
-  max-width: 900px;
+  max-width: 65%;
 }
 
 main .home-page .home-text .text-box {
-  margin: 0 0 8% 12%;
-  max-width: 900px;
+  margin-left: 12%;
+  max-width: 90%;
   color: rgb(244, 244, 244);
 }
 
@@ -118,38 +116,40 @@ main .home-page .home-text .text-box {
 .home-hero-bg,
 .about-hero-bg {
   display: flex;
-  flex: 1;
   background: linear-gradient(to top, #1b1b1b, #fcc23f);
   align-items: center;
   justify-content: center;
-  width: auto;
 }
 
 .home-hero-bg {
-  margin: 100px 0px 50px 20px;
-  border-radius: 20% 30px;
+  margin: 5% 0 0 5%;
+  max-width: 35%;
+  border-radius: 50px 30px;
 }
 
 .home-hero-bg .hero-box img {
   max-width: 500px;
-  margin-bottom: 110px;
+}
+
+main .about-page {
+  max-height: 100vh;
 }
 
 main .about-page .about-hero-bg {
-  margin: 8%;
-  min-width: 200px;
-  height: 85vh;
+  margin: 8% 8% 0 8%;
+  min-width: 15%;
+  max-width: 35%;
   border-radius: 20px;
 }
 
 .about-hero-bg img {
-  margin: 25% 0 8% 30%;
+  margin: 16% 0 0 30%;
   width: 400px;
 }
 
 main .about-page .text-box {
-  margin: 8% 8% 8% 12%;
-  max-width: 900px;
+  margin: 8% 0 0 12%;
+  max-width: 65%;
   color: rgb(244, 244, 244);
 }
 
@@ -160,7 +160,7 @@ main .about-page .text-box {
   color: #fcc23f;
   font-weight: 600;
   font-size: 50px;
-  margin: 40px 0;
+  margin: 3% 0;
 }
 
 .about-page .text-box p {
@@ -177,7 +177,6 @@ main .about-page .text-box {
   height: 50px;
   width: 150px;
   border-radius: 8px;
-  margin: 28px 0;
   transition: 0.5s;
   border: 2px solid #2f2f2f;
 }
@@ -263,7 +262,7 @@ main .contact-page {
   flex-direction: column;
   height: auto;
   width: 100%;
-  margin: 0 0 100px 0;
+  margin-bottom: 4%;
   padding: 0 2rem 2rem 2rem;
 }
 
@@ -285,7 +284,7 @@ main .services-page .services-content .services-box {
   justify-content: center;
   margin: 0 1% 0 6%;
   width: 25%;
-  height: 400px;
+  height: auto;
   color: rgb(244, 244, 244);
   border-radius: 5%;
   outline: 3px solid #fcc23f;
@@ -344,7 +343,6 @@ main .portofolio-page .portofolio-content .project-box {
 main .portofolio-page .portofolio-content .project-box .image-container {
   flex: 1 1 calc(50% - 1rem);
   max-width: calc(50% - 1rem);
-  height: auto;
   border-radius: 10px;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
@@ -385,24 +383,28 @@ main .portofolio-page .portofolio-content .project-box .image-container img {
   opacity: 1;
 }
 
+.sertificate-box {
+  height: 500px;
+}
+
 .sertificate-box .row-image {
   overflow: hidden;
-  flex: 1;
   max-width: 85%;
+  height: 500px;
   margin: 0 auto;
 }
 
 main .portofolio-page .portofolio-content .sertificate-box .row-image .wrap {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 70vh;
+  grid-auto-columns: 45%;
   justify-content: stretch;
   margin-top: 10%;
   animation: slide 50s linear infinite;
 }
 
 main .portofolio-page .portofolio-content .sertificate-box .row-image .wrap img {
-  height: 46vh;
+  height: 60%;
   margin: 10px auto;
   border-radius: 15px;
   object-fit: cover;
@@ -410,13 +412,14 @@ main .portofolio-page .portofolio-content .sertificate-box .row-image .wrap img 
 
 @keyframes slide {
   to {
-    translate: calc(-8 * 50vh);
+    translate: calc(-8 * 38%);
   }
 }
 
 main .contact-page .contact-content {
   display: flex;
   flex-direction: row;
+  height: auto;
 }
 
 main .contact-page .contact-content .my-contact {
@@ -523,3 +526,34 @@ footer p {
   color:#fcc23f;
   font-size: 20px;
 }
+
+/* 1280 px x 800 px */
+
+/* @media only screen and (max-width: 1280px) {
+
+  main .services-page .services-content .services-box {
+    margin: 0 1% 0 5%;
+    width: 30%;
+    height: auto;
+  }
+
+  main .portofolio-page .portofolio-content .sertificate-box .row-image .wrap img {
+    height: 58%;
+  }
+} */
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+  /* CSS styles */
+}
+
+/* Tablets (portrait) */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  /* CSS styles */
+}
+
+/* Desktops and laptops */
+@media only screen and (min-width: 1024px) {
+  /* CSS styles */
+}
+
