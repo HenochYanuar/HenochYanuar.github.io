@@ -17,7 +17,12 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#services">Services</a></li>
@@ -39,7 +44,11 @@
               interfaces and develop efficient server-side logic. I also have
               the ability to design databases with efficient logic.
             </p>
-            <button class="porto">Portfolio</button>
+            <a target="_blank" href="dist/document/Portfolio Henoch Yanuar Ari Swasono.pdf">
+              <button class="porto">
+                Portofolio
+              </button>
+            </a>
           </div>
         </div>
         <div class="home-hero-bg">
@@ -102,11 +111,11 @@
             being able to think critically and systematically. I am a person who
             is passionate about self-development and learning new things.
           </p>
-          <button class="cv-download">
-            <a target="_blank"
-              href="dist/document/Henoch Yanuar Ari Swasono CV.pdf">Download
-              CV</a>
-          </button>
+          <a target="_blank"href="dist/document/Henoch Yanuar Ari Swasono CV.pdf">
+            <button class="cv-download">
+              Download CV
+            </button>
+          </a>
         </div>
       </div>
       <!-- END : ABOUT ME-PAGE -->
@@ -338,13 +347,13 @@
               Thank You
             </h2>
             <p class="thanks-text">
-              I thank you for your visit, if you are interested in what I have
-              to offer, you can contact me via one of the contacts I attached
-              below, or send an email via the form on the side for further
-              information. Thank You
+              Thank you for your visit, if you are interested in what I have to
+              offer, you can contact me through one of the contacts I have
+              attached below, or send an email through the form on the side for
+              more information. Thank you
             </p>
             <p>+62 857-0325-7890 <i class="fab fa-whatsapp"></i></p>
-            <p>+62 857-0325-7890 <i class="fab fa-telegram"></i></p>
+            <p>@henochyanuar <i class="fab fa-telegram"></i></p>
             <p>henochyanuar13@gmail.com <i class="fab fa-google"></i></p>
             <p>henoch.yanuar.a@mail.ukrim.ac.id <i class="fab fa-google"></i></p>
             <div class="tools">
@@ -380,9 +389,44 @@
     <!-- START : FOOTER-PAGE -->
     <footer>
       <p>
-        Copyright &copy; 2024 Henoch Yanuar Ari Swasono. All rights reserved.
+        Copyright &copy; 2024 nocharrison_. All rights reserved.
       </p>
     </footer>
     <!-- END : FOOTER-PAGE -->
+    
+    <!-- START : SEND MAIL-SCRIPT -->
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "9BGf69fOEltZcODBm",
+          });
+      })();
+    </script>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          const templateParams = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              message: document.getElementById("message").value
+          };
+
+          emailjs.send("service_b3io03r","template_8w7ncfh", templateParams)
+              .then(function(response) {
+                  alert("Email berhasil dikirim!");
+              }, function(error) {
+                  alert("Email gagal dikirim: " + JSON.stringify(error));
+              });
+      });
+    </script>
+    <!-- END : SEND MAIL-SCRIPT -->
+
+    
+    <script src="dist/js/script.js"></script>
   </body>
 </html>
