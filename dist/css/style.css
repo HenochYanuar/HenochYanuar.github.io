@@ -31,12 +31,13 @@ header {
 header ul {
   display: flex;
   flex: 1;
-  list-style-type: none;
-  align-items: center;
+  list-style: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
 }
 
 header ul li {
-  display: inline;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -51,6 +52,27 @@ header nav a {
 
 header nav a:hover {
   color: #fcc23f;
+}
+
+header nav .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+header nav .menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+header ul.active {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 main {
@@ -156,7 +178,7 @@ main .about-page .text-box {
 .about-page .text-box h1,
 .services-page h1,
 .portofolio-page h1,
-.contact-page .sub-title h1{
+.contact-page .sub-title h1 {
   color: #fcc23f;
   font-weight: 600;
   font-size: 50px;
@@ -188,13 +210,13 @@ main .about-page .text-box {
   transform: translateY(-10px);
 }
 
-.cv-download a {
+.cv-download {
   color: #2f2f2f;
   font-size: 18px;
   text-decoration: none;
 }
 
-.cv-download:hover a {
+.cv-download:hover {
   color: rgb(244, 244, 244);
 }
 
@@ -286,7 +308,7 @@ main .services-page .services-content .services-box {
   width: 25%;
   height: auto;
   color: rgb(244, 244, 244);
-  border-radius: 5%;
+  border-radius: 10px;
   outline: 3px solid #fcc23f;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
@@ -468,7 +490,7 @@ main .contact-page .contact-content .form-mail {
 
 .form-mail .form-group {
   margin-bottom: 15px;
-} 
+}
 
 .form-mail .form-group label {
   color: rgb(244, 244, 244);
@@ -489,7 +511,7 @@ main .contact-page .contact-content .form-mail {
 }
 
 .form-mail .form-group input:focus,
-.form-mail .form-group textarea:focus{
+.form-mail .form-group textarea:focus {
   transform: scale(1.01);
   border: 1px solid #fcc23f;
   outline: none;
@@ -523,37 +545,333 @@ footer {
 }
 
 footer p {
-  color:#fcc23f;
+  color: #fcc23f;
   font-size: 20px;
 }
 
-/* 1280 px x 800 px */
+/* mobile (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+  header ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 
-/* @media only screen and (max-width: 1280px) {
+  headeer ul.active {
+    display: flex;
+  }
+
+  header ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  header nav .menu-toggle {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  main .home-page {
+    flex-direction: column;
+    max-height: 100%;
+    margin-bottom: 5%;
+  }
+
+  main .home-page .home-text {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  main .home-page .home-text .text-box {
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+  .text-box h1 {
+    font-size: 28px;
+  }
+
+  .text-box h2 {
+    font-size: 50px;
+  }
+
+  .home-hero-bg {
+    max-width: 80%;
+    margin: 5% auto;
+    border-radius: 20px;  
+  }
+
+  .home-hero-bg .hero-box img {
+    width: 80%;
+    margin: 0;
+  }
+
+  main .about-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 100%;
+  }
+
+  main .about-page aside {
+    position: static;
+    width: 100%;
+    margin-bottom: 12%;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+  }
+
+  main .about-page aside .social-media ul {
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main .about-page .about-hero-bg {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-hero-bg img {
+    width: 80%;
+    margin: 0;
+  }
+
+  main .about-page .text-box {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-page .text-box h1 {
+    font-size: 40px;
+  }
+
+  .about-page .text-box p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  main .services-page .sub-title {
+    font-size: 40px;
+    padding: 30px 0;
+  }
+
+  main .services-page .services-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
   main .services-page .services-content .services-box {
-    margin: 0 1% 0 5%;
-    width: 30%;
-    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
   }
 
-  main .portofolio-page .portofolio-content .sertificate-box .row-image .wrap img {
-    height: 58%;
+  .services-text h2 {
+    font-size: 22px;
+    margin-bottom: 8%;
   }
-} */
 
-/* Smartphones (portrait and landscape) */
-@media only screen and (max-width: 767px) {
-  /* CSS styles */
+  .services-text p {
+    font-size: 14px;
+  }
+
+  main .sub-title h1 {
+    font-size: 36px;
+  }
+
+  main .portofolio-page .portofolio-content .project-box {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  main .portofolio-page .portofolio-content .project-box .image-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .project-text h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-text p {
+    font-size: 14px;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .sertificate-box {
+    display: none;
+  }
+
+  .contact-page .sub-title h1 {
+    font-size: 36px;
+  }
+
+  main .contact-page .contact-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .contact-page .contact-content .my-contact {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  main .contact-page .contact-content .form-mail {
+    width: 100%;
+    max-width: none;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
 }
 
-/* Tablets (portrait) */
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
-  /* CSS styles */
+/* tablet */
+@media only screen and (max-width: 1100px) {
+  main .about-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 100%;
+  }
+
+  main .about-page aside {
+    position: static;
+    width: 100%;
+    margin-bottom: 12%;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+  }
+
+  main .about-page aside .social-media ul {
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main .about-page .about-hero-bg {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-hero-bg img {
+    width: 80%;
+    margin: 0;
+  }
+
+  main .about-page .text-box {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-page .text-box h1 {
+    font-size: 40px;
+  }
+
+  .about-page .text-box p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  main .services-page .sub-title {
+    font-size: 40px;
+    padding: 30px 0;
+  }
+
+  main .services-page .services-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .services-page .services-content .services-box {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+  }
+
+  .services-text h2 {
+    font-size: 22px;
+    margin-bottom: 8%;
+  }
+
+  .services-text p {
+    font-size: 14px;
+  }
+
+  main .sub-title h1 {
+    font-size: 36px;
+  }
+
+  main .portofolio-page .portofolio-content .project-box {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  main .portofolio-page .portofolio-content .project-box .image-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .project-text h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-text p {
+    font-size: 14px;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .sertificate-box {
+    display: none;
+  }
+
+  .contact-page .sub-title h1 {
+    font-size: 36px;
+  }
+
+  main .contact-page .contact-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .contact-page .contact-content .my-contact {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  main .contact-page .contact-content .form-mail {
+    width: 100%;
+    max-width: none;
+  }
 }
 
-/* Desktops and laptops */
-@media only screen and (min-width: 1024px) {
-  /* CSS styles */
+/* tablet (landscape)*/
+@media only screen and (max-width: 1300px) {
+  .sertificate-box {
+    display: none;
+  }
 }
-
