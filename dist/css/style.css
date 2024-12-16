@@ -560,7 +560,7 @@ footer p {
     left: 0;
   }
 
-  headeer ul.active {
+  header ul.active {
     display: flex;
   }
 
@@ -603,7 +603,7 @@ footer p {
   .home-hero-bg {
     max-width: 80%;
     margin: 5% auto;
-    border-radius: 20px;  
+    border-radius: 20px;
   }
 
   .home-hero-bg .hero-box img {
@@ -801,7 +801,7 @@ footer p {
   }
 
   main .services-page .services-content .services-box {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     margin: 0 0 20px 0;
   }
@@ -819,6 +819,14 @@ footer p {
     font-size: 36px;
   }
 
+  main .portofolio-page .portofolio-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   main .portofolio-page .portofolio-content .project-box {
     width: 100%;
     margin: 0;
@@ -828,7 +836,8 @@ footer p {
 
   main .portofolio-page .portofolio-content .project-box .image-container {
     flex: 1 1 100%;
-    max-width: 100%;
+    max-width: 85%;
+    margin-left: 8%;
     margin-bottom: 1rem;
   }
 
@@ -853,18 +862,20 @@ footer p {
   }
 
   main .contact-page .contact-content {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     align-items: center;
+    margin-left: 5%;
   }
 
   main .contact-page .contact-content .my-contact {
-    width: 100%;
+    width: 85%;
     margin: 0 0 20px 0;
   }
 
   main .contact-page .contact-content .form-mail {
-    width: 100%;
+    margin-top: 6%;
+    width: 90%;
     max-width: none;
   }
 }
