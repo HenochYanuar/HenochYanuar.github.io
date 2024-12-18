@@ -722,7 +722,7 @@ footer p {
 
   main .contact-page .contact-content {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -732,8 +732,10 @@ footer p {
   }
 
   main .contact-page .contact-content .form-mail {
+    margin-bottom: 6%;
     width: 100%;
     max-width: none;
+    padding: 0;
   }
 
   footer p {
@@ -863,7 +865,7 @@ footer p {
 
   main .contact-page .contact-content {
     width: 90%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin-left: 5%;
   }
@@ -874,7 +876,7 @@ footer p {
   }
 
   main .contact-page .contact-content .form-mail {
-    margin-top: 6%;
+    margin-bottom: 6%;
     width: 90%;
     max-width: none;
   }
