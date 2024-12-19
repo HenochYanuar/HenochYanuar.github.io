@@ -609,6 +609,7 @@ footer p {
   .home-hero-bg .hero-box img {
     width: 80%;
     margin: 0 0 0 20%;
+    border-radius: 0 0 15px 0;
   }
 
   main .about-page {
