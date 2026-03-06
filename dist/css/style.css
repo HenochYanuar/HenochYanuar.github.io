@@ -175,10 +175,10 @@ main .about-page .text-box {
   color: rgb(244, 244, 244);
 }
 
-.about-page .text-box h1,
-.services-page h1,
-.portofolio-page h1,
-.contact-page .sub-title h1 {
+.about-page .text-box h2,
+.services-page .sub-title h2,
+.portofolio-page .sub-title h2,
+.contact-page .sub-title h2 {
   color: #fcc23f;
   font-weight: 600;
   font-size: 50px;
@@ -321,7 +321,7 @@ main .services-page .services-content .services-box:hover {
   outline: 3px solid rgb(201, 201, 201);
 }
 
-.services-box:hover h2 {
+.services-box:hover h3 {
   color: #2f2f2f;
 }
 
@@ -331,9 +331,9 @@ main .services-page .services-content .services-box .services-text {
   padding: 8%;
 }
 
-.services-text h2,
-.my-contact h2,
-.project-text h2 {
+.services-text h3,
+.my-contact h3,
+.project-text h3 {
   color: #fcc23f;
   text-align: center;
   font-size: 25px;
@@ -675,7 +675,7 @@ footer p {
     margin: 0 0 20px 0;
   }
 
-  .services-text h2 {
+  .services-text h3 {
     font-size: 22px;
     margin-bottom: 8%;
   }
@@ -684,7 +684,7 @@ footer p {
     font-size: 14px;
   }
 
-  main .sub-title h1 {
+  main .sub-title h2 {
     font-size: 36px;
   }
 
@@ -701,7 +701,7 @@ footer p {
     margin-bottom: 1rem;
   }
 
-  .project-text h2 {
+  .project-text h3 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -717,7 +717,7 @@ footer p {
     display: none;
   }
 
-  .contact-page .sub-title h1 {
+  .contact-page .sub-title h2 {
     font-size: 36px;
   }
 
@@ -809,7 +809,7 @@ footer p {
     margin: 0 0 20px 0;
   }
 
-  .services-text h2 {
+  .services-text h3 {
     font-size: 22px;
     margin-bottom: 8%;
   }
@@ -844,7 +844,7 @@ footer p {
     margin-bottom: 1rem;
   }
 
-  .project-text h2 {
+  .project-text h3 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -860,7 +860,7 @@ footer p {
     display: none;
   }
 
-  .contact-page .sub-title h1 {
+  .contact-page .sub-title h2 {
     font-size: 36px;
   }
 
