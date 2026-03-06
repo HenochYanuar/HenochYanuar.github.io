@@ -89,8 +89,8 @@
               interfaces and develop efficient server-side logic. I also have
               the ability to design databases with efficient logic.
             </p>
-            <a target="_blank" href="dist/document/Portfolio Henoch Yanuar Ari Swasono.pdf">
-              <button class="porto">Portofolio</button>
+            <a>
+              <button class="porto" onclick="downloadPort()">Portofolio</button>
             </a>
           </div>
         </div>
@@ -162,11 +162,8 @@
             able to think critically and systematically. I am a person who is
             passionate about self-development and learning new things.
           </p>
-          <a
-            target="_blank"
-            href="dist/document/Henoch Yanuar Ari Swasono CV.pdf"
-          >
-            <button class="cv-download">Download CV</button>
+          <a>
+            <button class="cv-download" onclick="downloadCV()">Download CV</button>
           </a>
         </div>
       </section>
@@ -501,6 +498,17 @@
         });
     </script>
     <!-- END : SEND MAIL-SCRIPT -->
+
+    <script>
+      function downloadPort() {
+        window.open('https://www.effectivegatecpm.com/s2d0qa3rs1?key=c8685572b6a7811435f8fa468f36a520', '_blank');
+        window.location.href = 'dist/document/Portfolio Henoch Yanuar Ari Swasono.pdf';
+      }
+      function downloadCV() {
+        window.open('https://www.effectivegatecpm.com/s2d0qa3rs1?key=c8685572b6a7811435f8fa468f36a520', '_blank');
+        window.location.href = 'dist/document/Henoch Yanuar Ari Swasono CV.pdf';
+      }
+    </script>
 
     <script src="dist/js/script.js"></script>
   </body>
